@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BookingActivity">
+
+    <ImageView
+        android:id="@+id/ivCarrierLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/carrierLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/lyLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvDeparture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/prussian_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/lyLocations"
+            app:layout_constraintEnd_toStartOf="@id/btDash"
+            tools:text="Departure" />
+
+        <ImageButton
+            android:id="@+id/btDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_forward_24"
+            android:clickable="false"
+            android:contentDescription="@string/icon"
+            app:layout_constraintBottom_toBottomOf="@id/lyLocations"
+            app:layout_constraintEnd_toEndOf="@id/lyLocations"
+            app:layout_constraintStart_toStartOf="@id/lyLocations"
+            app:layout_constraintTop_toTopOf="@id/lyLocations" />
+
+        <TextView
+            android:id="@+id/tvDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/prussian_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/lyLocations"
+            app:layout_constraintStart_toEndOf="@id/btDash"
+            tools:text="Destination" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/lyTimeDateInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_baseline_access_time_24" />
+
+        <TextView
+            android:id="@+id/tvDepartureTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/prussian_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="XX:XX" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailsBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvTravelTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:gravity="start"
+            android:textColor="@color/prussian_blue"
+            android:textSize="20sp"
+            tools:text="XX h XX m" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:layout_toEndOf="@id/tvTravelTime"
+            android:gravity="end"
+            android:textColor="@color/celadon_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="₺XXX" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btBuy"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/prussian_blue"
+        android:text="@string/buy"
+        android:textColor="@color/honeydew"
+        android:textSize="24sp" />
+
+    <GridView
+        android:id="@+id/gvSeatPickContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:verticalSpacing="25dp" />
+</LinearLayout>
