@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
-import android.widget.Toast
 import com.example.billatapp.R
 
 class BookingGridViewAdapter(private val context: Context, private val seats: ArrayList<ImageView>) : BaseAdapter() {
