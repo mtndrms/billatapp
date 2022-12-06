@@ -3,24 +3,24 @@
     <item
         android:id="@+id/label1"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@drawable/ic_search"
         android:title="@string/search" />
 
     <item
         android:id="@+id/label2"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_library_books_24"
+        android:icon="@drawable/ic_library_books"
         android:title="@string/my_tickets" />
 
     <item
         android:id="@+id/label3"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_help_outline_24"
+        android:icon="@drawable/ic_help"
         android:title="@string/help" />
 
     <item
         android:id="@+id/label4"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_person_24"
+        android:icon="@drawable/ic_person"
         android:title="@string/my_account" />
 </menu>

@@ -54,7 +54,7 @@
                     android:id="@+id/btDash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_baseline_arrow_forward_24"
+                    android:background="@drawable/ic_arrow_forward"
                     android:clickable="false"
                     android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toBottomOf="@id/lyLocations"
@@ -88,7 +88,7 @@
                     android:id="@+id/tvIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_baseline_access_time_24"
+                    android:background="@drawable/ic_time"
                     android:layout_marginEnd="5dp"/>
 
                 <TextView

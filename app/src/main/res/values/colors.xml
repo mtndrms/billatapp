@@ -8,6 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="background">#F8F8F8</color>
+    <color name="secondary_background">#FFFFFF</color>
+    <color name="yellow">#FDC521</color>
+    <color name="dark_blue">#22242B</color>
+    <color name="font_color_dark">#22242B</color>
+    <color name="font_color_light">#FAFAFA</color>
+    <color name="gray">#CFCFCF</color>
     <color name="imperial_red">#E63946</color>
     <color name="honeydew">#F1FAEE</color>
     <color name="powder_blue">#A8DADC</color>

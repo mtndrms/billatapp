@@ -23,4 +23,12 @@
     <string name="seat_number">Seat number</string>
     <string name="carrierLogo">carrierLogo</string>
     <string name="seat">SEAT</string>
+    <string name="customer_s_photo">Customer\'s photo</string>
+    <string name="where_do_you_want_to_go">Where do you\nwant to go?</string>
+    <string name="change_sides">Change sides</string>
+    <string name="to">To</string>
+    <string name="departure_location">Departure Location</string>
+    <string name="destination_location">Destination Location</string>
+    <string name="dashes">--------------------------</string>
+    <string name="bottom_navigation_icon">Botton navigation icon</string>
 </resources>

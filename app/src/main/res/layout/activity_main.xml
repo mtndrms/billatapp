@@ -6,194 +6,241 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/prussian_blue"
-        android:gravity="center"
-        android:letterSpacing="0.1"
-        android:text="@string/title"
-        android:textColor="@color/honeydew"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/rgOpinion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/rgOpinion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:checkedButton="@id/rbBus"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/etFromLayout"
-        app:layout_constraintEnd_toEndOf="@id/glRight"
-        app:layout_constraintStart_toStartOf="@id/glLeft"
-        app:layout_constraintTop_toBottomOf="@+id/glTop">
-
-        <RadioButton
-            android:id="@+id/rbBus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/toggle_button_selector"
-            android:button="@android:color/transparent"
-            android:checked="true"
-            android:gravity="center"
-            android:paddingLeft="16sp"
-            android:paddingTop="3sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="3sp"
-            android:text="@string/bus"
-            android:textColor="@color/toggle_button_text_selector"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/rbPlane"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/toggle_button_selector"
-            android:button="@android:color/transparent"
-            android:gravity="center"
-            android:paddingLeft="16sp"
-            android:paddingTop="3sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="3sp"
-            android:text="@string/plane"
-            android:textColor="@color/toggle_button_text_selector"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/rbTrain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/toggle_button_selector"
-            android:button="@android:color/transparent"
-            android:gravity="center"
-            android:paddingLeft="16sp"
-            android:paddingTop="3sp"
-            android:paddingRight="16sp"
-            android:paddingBottom="3sp"
-            android:text="@string/train"
-            android:textColor="@color/toggle_button_text_selector"
-            android:textSize="16sp" />
-    </RadioGroup>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etFromLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/from"
-        app:boxStrokeColor="@color/prussian_blue"
-        app:boxStrokeErrorColor="@color/imperial_red"
-        app:boxStrokeWidth="2sp"
-        app:layout_constraintBottom_toTopOf="@id/etWhereLayout"
-        app:layout_constraintEnd_toEndOf="@id/glRight"
-        app:layout_constraintStart_toStartOf="@id/glLeft"
-        app:layout_constraintTop_toBottomOf="@id/rgOpinion"
-        app:startIconDrawable="@drawable/ic_baseline_flag_24">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFrom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etWhereLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/where"
-        app:boxStrokeColor="@color/prussian_blue"
-        app:boxStrokeErrorColor="@color/imperial_red"
-        app:boxStrokeWidth="2sp"
-        app:layout_constraintBottom_toTopOf="@id/btSearch"
-        app:layout_constraintEnd_toEndOf="@id/glRight"
-        app:layout_constraintStart_toStartOf="@id/glLeft"
-        app:layout_constraintTop_toBottomOf="@id/etFromLayout"
-        app:startIconDrawable="@drawable/ic_baseline_flag_24">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etWhere"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btPickDate"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/pick_date"
-        android:textColor="@color/prussian_blue"
-        android:textSize="18sp"
-        app:icon="@drawable/ic_baseline_date_range_24"
-        app:iconTint="@color/prussian_blue"
-        app:layout_constraintBottom_toBottomOf="@id/glBottom"
-        app:layout_constraintEnd_toStartOf="@id/btSearch"
-        app:layout_constraintStart_toStartOf="@id/glLeft"
-        app:layout_constraintTop_toBottomOf="@id/etWhereLayout"
-        app:strokeColor="@color/prussian_blue"
-        app:strokeWidth="2sp" />
-
-    <Button
-        android:id="@+id/btSearch"
-        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:id="@+id/tvLabel"
         android:layout_width="wrap_content"
-        android:layout_height="65dp"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/prussian_blue"
-        android:text="@string/search"
-        android:textColor="@color/honeydew"
-        android:textSize="18sp"
-        app:icon="@drawable/ic_baseline_search_24"
-        app:layout_constraintBottom_toBottomOf="@id/glBottom"
-        app:layout_constraintEnd_toEndOf="@id/glRight"
-        app:layout_constraintStart_toEndOf="@id/btPickDate"
-        app:layout_constraintTop_toBottomOf="@id/etWhereLayout" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/where_do_you_want_to_go"
+        android:textColor="@color/font_color_dark"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nbNavigationBar"
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/customer_s_photo"
+        android:src="@drawable/person_avatar"
+        app:layout_constraintEnd_toStartOf="@id/glRight"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconTint="@color/prussian_blue"
-        app:itemTextColor="@color/prussian_blue"
-        app:labelVisibilityMode="labeled"
+        android:layout_margin="25dp"
+        android:background="@drawable/bg_search_field"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel">
+
+        <ImageView
+            android:id="@+id/ivChangeSides"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/change_sides"
+            android:src="@drawable/ic_change_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/dark_blue" />
+
+        <TextView
+            android:id="@+id/tvLabelDashes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0.5"
+            android:lines="1"
+            android:text="@string/dashes"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivChangeSides"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLabelFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/from"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="@string/departure_location"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@id/ivChangeSides"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelFrom" />
+
+        <TextView
+            android:id="@+id/tvLabelTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/to"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelDashes" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="@string/destination_location"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@id/ivChangeSides"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelTo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_button_shape"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/font_color_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glRight"
+        app:layout_constraintStart_toEndOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/containerSearch" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerNews"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_news_field"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toStartOf="@id/glRight"
+        app:layout_constraintStart_toEndOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/btnContinue">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/izmir"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="İZMİR"
+            android:textColor="@color/font_color_light"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/tvDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Visit İzmir just for 200₺"
+            android:textColor="@color/font_color_light"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/btnLearnMore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewsTitle" />
+
+        <TextView
+            android:id="@+id/btnLearnMore"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_glass_effect"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Learn More"
+            android:textColor="@color/font_color_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toStartOf="@id/glRight"
+        app:layout_constraintStart_toEndOf="@id/glLeft">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/bottom_navigation_icon"
+            android:src="@drawable/ic_home_filled"
+            app:tint="@color/dark_blue" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/bottom_navigation_icon"
+            android:src="@drawable/ic_bookmark_outline"
+            app:tint="@color/dark_blue" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/bottom_navigation_icon"
+            android:src="@drawable/ic_ticket_outline"
+            app:tint="@color/dark_blue" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/bottom_navigation_icon"
+            android:src="@drawable/ic_settings_outline"
+            app:tint="@color/dark_blue" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="25dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="50dp" />
+        app:layout_constraintGuide_end="25dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="25dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBottom"
