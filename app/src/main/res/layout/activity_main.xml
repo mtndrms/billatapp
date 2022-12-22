@@ -122,7 +122,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerNews"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="225dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/bg_news_field"
         android:orientation="vertical"
@@ -182,8 +182,8 @@
         android:layout_height="50dp"
         android:background="@color/background"
         android:orientation="horizontal"
-        android:paddingTop="7dp"
-        android:paddingBottom="7dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/glRight"
         app:layout_constraintStart_toEndOf="@id/glLeft">
